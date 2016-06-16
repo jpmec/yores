@@ -1,0 +1,13 @@
+<h2>Show narrator</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @narrator.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: narrator_path(@conn, :edit, @narrator) %>
+<%= link "Back", to: narrator_path(@conn, :index) %>

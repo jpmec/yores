@@ -1,0 +1,6 @@
+<h2>Edit narrator</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: narrator_path(@conn, :update, @narrator) %>
+
+<%= link "Back", to: narrator_path(@conn, :index) %>
