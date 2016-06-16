@@ -1,0 +1,13 @@
+<h2>Show scene</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @scene.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: scene_path(@conn, :edit, @scene) %>
+<%= link "Back", to: scene_path(@conn, :index) %>

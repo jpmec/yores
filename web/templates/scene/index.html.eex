@@ -1,0 +1,26 @@
+<h2>Listing scenes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for scene <- @scenes do %>
+    <tr>
+      <td><%= scene.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: scene_path(@conn, :show, scene), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: scene_path(@conn, :edit, scene), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: scene_path(@conn, :delete, scene), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New scene", to: scene_path(@conn, :new) %>

@@ -1,0 +1,6 @@
+<h2>Edit scene</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: scene_path(@conn, :update, @scene) %>
+
+<%= link "Back", to: scene_path(@conn, :index) %>
